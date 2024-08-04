@@ -1,0 +1,49 @@
+{
+  "createPost": {
+    "url": "/posts",
+    "method": "post",
+    "description": "Create post successful",
+    "requestBodyObject": {
+      "title": "foo",
+      "body": "bar",
+      "userId": 1
+    },
+    "headers": {
+      "Accept": "application/json"
+    },
+    "expectedHttpStatus": 201,
+    "expectedResponseBody": {
+      "id": 101,
+      "title": "foo",
+      "body": "bar",
+      "userId": 1
+    }
+  },
+  "updatePost": {
+    "url": "/posts/",
+    "method": "put",
+    "description": "Update post successful",
+    "requestBodyObject": {
+      "id": 1,
+      "title": "foo",
+      "body": "bar",
+      "userId": 1
+    },
+    "headers": {
+      "Accept": "application/json",
+      "Content-Type": "application/json",
+      "x-messageId": "5436",
+      "x-appCorrelationId": "random",
+      "x-organisationId": "SGB",
+      "x-originatingSystemId": "YF-016",
+      "x-consumerType": "Partner"
+    },
+    "expectedHttpStatus": 200,
+    "expectedResponseBody": {
+      "id": 100,
+      "title": "foo",
+      "body": "bar",
+      "userId": 1
+    }
+  }
+}

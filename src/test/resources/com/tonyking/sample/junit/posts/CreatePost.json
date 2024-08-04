@@ -1,0 +1,26 @@
+{
+  "url": "/posts",
+  "method": "post",
+  "description": "Create post successful",
+  "requestBodyObject": {
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+  },
+  "headers": {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+    "x-messageId": "5436",
+    "x-appCorrelationId": "#(java.util.UUID.randomUUID().toString())",
+    "x-organisationId": "SGB",
+    "x-originatingSystemId": "YF-016",
+    "x-consumerType": "Partner"
+  },
+  "expectedHttpStatus": 201,
+  "expectedResponseBody": {
+    "id": 101,
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+  }
+}
